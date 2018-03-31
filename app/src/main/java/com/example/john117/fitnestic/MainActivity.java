@@ -24,7 +24,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.example.john117.fitnestic.*;
 
 public class MainActivity extends AppCompatActivity implements
         View.OnClickListener,
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
+        btnSignIn = (SignInButton) findViewById(R.id.sign_in_button);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
@@ -135,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements
         int id = v.getId();
 
         switch (id) {
-            case R.id.btn_sign_in:
+            case R.id.sign_in_button:
                 signIn();
                 break;
 
@@ -196,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements
     private void showProgressDialog() {
         if (mProgressDialog == null) {
             mProgressDialog = new ProgressDialog(this);
-            mProgressDialog.setMessage(getString(R.string.loading));
+            mProgressDialog.setMessage("Loading");
             mProgressDialog.setIndeterminate(true);
         }
 
