@@ -25,6 +25,8 @@ import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
+import static com.example.john117.fitnestic.R.id.sign_in_button;
+
 public class MainActivity extends AppCompatActivity implements
         View.OnClickListener,
         GoogleApiClient.OnConnectionFailedListener {
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        btnSignIn = (SignInButton) findViewById(R.id.sign_in_button);
+        btnSignIn = (SignInButton) findViewById(sign_in_button);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
@@ -134,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements
         int id = v.getId();
 
         switch (id) {
-            case R.id.sign_in_button:
+            case sign_in_button:
                 signIn();
                 break;
 
